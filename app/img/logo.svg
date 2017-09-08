@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     width="200"
+     height="52"
+     viewBox="0 0 200 52">
+    <sodipodi:namedview pagecolor="#ffffff"
+                        bordercolor="#666666"
+                        borderopacity="1"
+                        objecttolerance="10"
+                        gridtolerance="10"
+                        guidetolerance="10"
+                        id="namedview12"
+                        showgrid="false"/>
+    <image sodipodi:absref="D:\WORK\RESIDENT2.0\app\img\logo.png"
+           xlink:href="logo.png"
+           y="0"
+           x="0"
+           id="image18"
+           style="image-rendering:optimizeQuality"
+           preserveAspectRatio="none"
+           height="52"
+           width="200"/>
+</svg>
