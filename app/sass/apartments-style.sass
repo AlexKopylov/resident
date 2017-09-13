@@ -1,0 +1,195 @@
+@import "vars"
+
+.apartments
+	width: 100%
+	background-color: #f4ede7
+	&__inner
+		+inner
+		//background-color: red
+		padding-top: 100px
+	&__heading
+		text-align: center
+		+fonts($ZI, $main-color, 60, 72, 25)
+	&__description
+		width: 100%
+		background-color: burlywood
+	&__description-inner
+		display: flex
+		justify-content: space-between
+	&__description-left
+		align-self: flex-end
+	&__description-center
+		width: calc(100% - 280px)
+		background-color: #fff
+		text-align: center
+		height: 440px
+		position: relative
+	&__description-right
+		align-self: center
+.img-wrap
+	&:before
+		content: ''
+		width: 324px
+		height: 324px
+		border: 1px solid #000000
+		border-radius: 50%
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		z-index: 1
+		opacity: .5
+	&:after
+		content: ''
+		width: 304px
+		height: 304px
+		border: 1px solid #000000
+		border-radius: 50%
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		z-index: 0
+		opacity: .5
+	img
+		position: absolute
+		top: 50%
+		left: 50%
+		z-index: 10
+		transform: translate(-50%, -50%)
+
+//====================================
+.page-nav
+	width: 100%
+	margin: 30px auto
+	&__list
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__item
+		//width: 140px
+		//background-color: green
+	&__text
+		+fonts($R_Bold, #596472, 12, 16, 25)
+	&__num
+		+fonts($EG_Bold, $main-color, 36, 42, 25)
+//====================================
+.room-set
+	width: 140px
+	&__list
+		width: 100%
+	&__item
+		width: 100%
+		height: 60px
+		text-align: center
+		position: relative
+
+//====================================
+.param
+	width: 140px
+	position: relative
+	padding: 40px 0
+	&__link
+		position: absolute
+		width: 30px
+		height: 30px
+		background-color: red
+		left: 0
+		right: 0
+		margin: 0 auto
+		&--top
+			top: 0
+		&--bot
+			bottom: 0
+
+	&__list
+		+bWidth(125, 140)
+		margin: 0 0 0 auto
+		height: 350px
+		overflow: hidden
+		//overflow-y: auto
+		border-top-color: red
+	&__item
+		width: 100%
+		background-color: green
+		height: 60px
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		align-items: flex-start
+		margin-bottom: 10px
+	&__num
+		width: 50%
+		height: 30px
+		display: block
+		background-color: #fff
+		//+fonts($EG_Bold, $main-color, 36, 36, 25)
+		+fonts($R_Reg, #000, 12, 16, 25)
+
+
+		text-align: center
+		sub
+			bottom: 0
+		&--big
+			width: 100%
+
+	&__text
+		display: block
+		width: 50%
+		height: 30px
+		+fonts($R_Reg, #000, 12, 16, 25)
+		//height: 42px
+		align-self: flex-start
+		&--big
+			width: 100%
+			text-align: center
+			padding: 5px 0
+
+//====================================
+.windrose-wrap
+	position: absolute
+
+//====================================
+
+/*==========  Desktop First  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	/**/
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 500px)
+	/**/
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/

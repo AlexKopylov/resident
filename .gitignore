@@ -2,3 +2,5 @@
 .gitignore
 .idea/
 WORK_MATERIAL/
+node_modules/
+

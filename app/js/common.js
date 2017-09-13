@@ -1,5 +1,5 @@
 $(function() {
 
-	// Custom JS
+	$(".param__list")
 
 });

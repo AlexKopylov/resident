@@ -33,13 +33,206 @@ body
 	min-width: 320px
 	position: relative
 	line-height: 1.75
-	font-family: $default-font
-	overflow-x: hidden
-	opacity: 1
+	font-family: $R_Reg
+	//overflow-x: hidden
+	//opacity: 1
 
-.img-responsive
+.all_wrapper
+	display: flex
+	flex-direction: column
+	min-height: 100vh
+	position: relative
+.content
+	flex: 1
+
+//============= header ==========
+@import "main-header-style"
+//style for header
+//============= footer ==========
+@import "main-footer-style"
+//style for footer
+//===============================
+@import "apartments-style" // apartments page style
+//===============================
+//===============================
+//===============================
+.content
+	width: 100%
+	height: 100%
+	position: relative
+	z-index: 1
+	&__inner
+		background-color: rgba(#000000, .5)
+
+	&__inner
+		+inner
+		//position: relative
+	&__link
+		+fonts($EG_Bold, $main-color, 12, 24, 500)
+		font-weight: bold
+		text-decoration: none
+		position: absolute
+		border-bottom: 1px solid
+		transition: all 1s
+		&:hover
+			transition: 1s
+			border-bottom: 1px solid red
+//===============================
+.main
+	background: url("../img/main_page/bg.jpg") no-repeat center top / cover
+	min-height: 100vh
+	height: 100vh
+	padding: 7% 0 3%
+	&__inner
+		//background-color: red
+		height: 100%
+		+inner
+		position: relative
+	&__logo-wrap
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		width: 340px
+		height: 340px
+		padding: 7px
+		box-sizing: border-box
+		border: 1px solid #ebe1d9
+		border-radius: 50%
+		&::after
+			content: ''
+			width: 97%
+			height: 97%
+			background-color: rgba(#ffffff, .8)
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			z-index: 1
+			border-radius: 50%
+	&__heading
+		position: relative
+		z-index: 30
+		text-align: center
+		+fonts($ZI, $main-color, 90, 130, 25)
+		margin: 50px auto 0
+		text-indent: 20px
+	&__text
+		+fonts($EG_Bold, $main-color, 60, 110, 25)
+		text-transform: uppercase
+		position: absolute
+		z-index: 31
+		top: 50%
+		left: 50%
+		transform: translate(-50%,-50%)
+		&::before
+			content: ''
+			height: 1px
+			position: absolute
+			top: 60%
+			right: 110%
+			background-color: #f0ae76
+			width: 80px
+			z-index: 32
+		&::after
+			content: ''
+			height: 1px
+			position: absolute
+			top: 60%
+			left: 110%
+			background-color: #f0ae76
+			width: 80px
+			z-index: 32
+//===============================
+.l-t,
+.r-t,
+.l-b,
+.r-b
+	width: 50px
+	height: 50px
+	position: absolute
+	background-color: greenyellow
+	border-radius: 50%
 	display: block
-	max-width: 100%
-	height: auto
+	text-align: center
+	color: #000
+
+.l-t
+	top: 0
+	left: 0
+
+.r-t
+	top: 0
+	right: 0
+.l-b
+	bottom: 0
+	left: 0
+.r-b
+	bottom: 0
+	right: 0
+
+//===============================
+.main-btn-left
+	top: 50%
+	left: 50px
+.main-btn-right
+	top: 50%
+	right: 50px
+.main-btn-center
+	bottom: 5%
+	left: 50%
+	right: 50%
+	margin: auto
+	transform: rotate(-90deg)
+//===============================
+//===============================
+.black-wrapper
+	position: absolute
+	width: 540px
+	height: 400px
+	padding: 5px
+	//&__inner
+	&__heading
+		+fonts($ZI,$main-color, 90, 130, 25)
+	&__description
+		+fonts($EG_Bold,$main-color, 30, 45, 25)
+		margin: 15px auto
+		position: relative
+		&::before
+			content: ''
+			height: 1px
+			background-color: #f0ae76
+			position: absolute
+			top: 0
+			left: 0
+		&::after
+			content: ''
+	&__text-wrapper
+		width: 380px
+		margin: 0 auto
+		padding: 0 25px
+		height: 200px
+		overflow: auto
+	&__text
+		+fonts($R_Reg, #596472, 12, 24, 25)
+		text-align: justify
+//===============================
+//===============================
+.floor_page
+	width: 100%
+	min-height: 100%
+	display: flex
+	justify-content: flex-start
+	&__left,
+	&__right
+		width: 50%
+	&__left
+		background: url("../img/floor_page/floor_page_bg.jpg") no-repeat center top / cover
+		min-height: 100vh
+	&__right
+		background-color: green
+
+//===============================
+//===============================
 
 @import "media" // Всегда в конце

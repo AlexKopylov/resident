@@ -1,0 +1,127 @@
+@import vars
+
+.top-head
+	background-color: rgba(#ffffff,.5)
+	position: fixed
+	width: 100%
+	z-index: 999
+	&__inner
+		+inner
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__left,
+	&__right
+		width: 50%
+	&__logo
+		width: 200px
+		+aBtn
+		padding: 12px 0
+		img
+			+img-respons
+//==========================
+.navigation
+	width: 100%
+	//background-color: #000
+	&__list
+		background-color: #fff
+		display: flex
+		justify-content: space-between
+		align-items: center
+		width: 240px
+		margin: 0 0 0 auto
+	//&__item
+	&__link
+		+aBtn
+		width: 25px
+		height: 20px
+		text-indent: -99999px
+		background: url("../img/top_icon/mail_icon.png") no-repeat center top
+
+//==========================
+.lang
+	width: 60px
+	//height: 20px
+	//overflow: hidden
+	&__list
+		width: 100%
+		background-color: green
+		position: relative
+		height: auto
+		min-height: 20px
+		//overflow: hidden
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			right: 0
+			background: url("../img/top_icon/arrow_icon.png") center center
+			width: 16px
+			height: 10px
+		&:hover .lang__item
+			height: 20px
+	&__item
+		position: absolute
+
+		width: 100%
+		padding-left: 5px
+	&__link
+		display: block
+		width: 100%
+		//height: 20px
+
+
+
+
+/*==========  Desktop First  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	/**/
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 500px)
+	/**/
+	.navigation__list
+		width: 170px
+		height: 25px
+	.lang
+		display: none
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+	.top-head__left
+		width: 40%
+	.top-head__right
+		width: 60%
+	.top-head__logo
+		width: 130px
+		padding: 10px 0
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
