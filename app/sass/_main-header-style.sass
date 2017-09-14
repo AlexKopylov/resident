@@ -5,6 +5,8 @@
 	position: fixed
 	width: 100%
 	z-index: 999
+	&--other
+		background-color: transparent
 	&__inner
 		+inner
 		display: flex
@@ -24,54 +26,89 @@
 	width: 100%
 	//background-color: #000
 	&__list
-		background-color: #fff
+		//background-color: #fff
 		display: flex
 		justify-content: space-between
 		align-items: center
 		width: 240px
 		margin: 0 0 0 auto
-	//&__item
+	&__item
+		height: 30px
+	&__item.color
+		background-color: red
 	&__link
 		+aBtn
-		width: 25px
-		height: 20px
-		text-indent: -99999px
-		background: url("../img/top_icon/mail_icon.png") no-repeat center top
+		pointer-events: none
+		width: 40px
+		height: 28px
+
+.nav_icon
+	font-size: 18px
+	background: url("../img/top_icon/phone_icon.png") no-repeat center top
+	text-indent: -99999px
+	color: transparent
+.nav_icon2
+	font-size: 18px
+	background: url("../img/top_icon/map_icon.png") no-repeat center top
+	text-indent: -99999px
+	color: transparent
+.nav_icon3
+	font-size: 18px
+	background: url("../img/top_icon/mail_icon.png") no-repeat center top
+	text-indent: -99999px
+	color: transparent
+.nav_icon4
+	font-size: 18px
+	background: url("../img/top_icon/menu_icon.png") no-repeat center top
+	text-indent: -99999px
+	color: transparent
+
 
 //==========================
 .lang
 	width: 60px
-	//height: 20px
-	//overflow: hidden
+	position: relative
+	top: -10px
+	background-color: blue
 	&__list
 		width: 100%
-		background-color: green
-		position: relative
-		height: auto
-		min-height: 20px
-		//overflow: hidden
+		position: absolute
+		top: 0
+		height: 20px
+		overflow: hidden
+		transition: height 1s
+		&:hover
+			background-color: #fff
+			transition: height 1s
+			height: 60px
 		&::after
 			content: ''
 			position: absolute
-			top: 0
-			right: 0
+			top: 5px
+			right: 5px
 			background: url("../img/top_icon/arrow_icon.png") center center
 			width: 16px
 			height: 10px
 		&:hover .lang__item
 			height: 20px
 	&__item
-		position: absolute
-
 		width: 100%
-		padding-left: 5px
+		transition: background-color 1s
+		&:hover
+			background-color: #000
+			transition: background-color 1s
+		&:hover .lang__link
+			color: #fff
+			transition: color 1s
 	&__link
+		+aBtn
+		+fonts($R_Bold, $main-color, 12, 14, 0)
 		display: block
 		width: 100%
-		//height: 20px
-
-
-
+		height: 100%
+		padding: 3px 0 3px 5px
+		text-align: left
+		transition: color 1s
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */

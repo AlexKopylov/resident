@@ -17,55 +17,61 @@
   <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
   <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
 
+  <link rel="stylesheet" href="libs/slick/slick.css">
+  <link rel="stylesheet" href="libs/slick/slick-theme.css">
   <link rel="stylesheet" href="css/main.min.css">
 
 </head>
 
 <body>
 <div class="all_wrapper">
-  <header class="top-head">
+  <header class="top-head top-head--other">
 	<div class="top-head__inner">
 	  <div class="top-head__left">
-		<a href="#" class="top-head__logo">
+		<a href="index.html" class="top-head__logo">
 		  <img src="img/logo.png" alt="logo-icon">
 		</a>
 	  </div>
 	  <div class="top-head__right">
 		<nav class="navigation">
 		  <ul class="navigation__list">
-			<li class="navigation__item">
+			<li class="navigation__ite1">
 			  <div class="lang">
 				<ul class="lang__list">
-				  <li class="lang__item">
-					<a class="lang__link" href="#">weq</a>
+				  <li class="lang__item" data-nav-item="1">
+					<a class="lang__link"  href="#">Укр</a>
 				  </li>
 				  <li class="lang__item">
-					<a class="lang__link" href="#">weq</a>
+					<a class="lang__link" data-nav-item="2" href="#">Рус</a>
 				  </li>
-				  <li class="lang__item">
-					<a class="lang__link" href="#">weq</a>
+				  <li class="lang__item" data-nav-item="3">
+					<a class="lang__link" href="#">Eng</a>
 				  </li>
 				</ul>
 			  </div>
 			</li>
 			<li class="navigation__item">
 			  <a href="#" class="navigation__link">
-				заказать звонок
+				<i class="nav_icon">123</i>
+				<!--заказать звонок-->
 			  </a>
 			</li>
 			<li class="navigation__item">
 			  <a href="#" class="navigation__link">
-				карта
+				<i class="nav_icon2">221</i>
+				<!--карта-->
 			  </a>
 			</li>
 			<li class="navigation__item">
 			  <a href="#" class="navigation__link">
-				почта
+				<i class="nav_icon3">221</i>
+				<!--почта-->
 			  </a>
 			</li>
 			<li class="navigation__item">
 			  <a href="#" class="navigation__link">
-				меню
+				<i class="nav_icon4">3221</i>
+				<!--меню-->
 			  </a>
 			</li>
 		  </ul>
@@ -75,17 +81,17 @@
   </header>
   <!--/END top-head-->
 
-  <main class="content" role="main">
+  <main class="content" role="content">
 
 	<div class="apartments">
 	  <div class="apartments__inner">
 		<h1 class="apartments__heading">Обрати квартиру</h1>
 		<div class="page-nav">
 		  <ul class="page-nav__list">
-			<li class="page-nav__item">
+			<li class="page-nav__item" data-page-nav-item="1">
 			  <span class="page-nav__text">Обрати поверх</span>
 			</li>
-			<li class="page-nav__item">
+			<li class="page-nav__item" data-page-nav-item="2">
 			  <span class="page-nav__text">Підбір по параметрам</span>
 			</li>
 			<li class="page-nav__item">
@@ -110,9 +116,9 @@
 			  <div class="room-set">
 				<ul class="room-set__list">
 				  <li class="room-set__item">Придбана</li>
-				  <li class="room-set__item">1 Кімната</li>
-				  <li class="room-set__item">2 Кімнати</li>
-				  <li class="room-set__item">3 Кімнати</li>
+				  <li class="room-set__item" data-cl="one">1 Кімната</li>
+				  <li class="room-set__item" data-cl="two">2 Кімнати</li>
+				  <li class="room-set__item" data-cl="three">3 Кімнати</li>
 				</ul>
 			  </div>
 			</div>
@@ -124,8 +130,9 @@
 			</div>
 			<div class="apartments__description-right">
 			  <div class="param">
-				<a class="param__link param__link--top" href="#">up</a>
+
 				<ul class="param__list">
+
 				  <li class="param__item">
 					<p class="param__num">2Г</p>
 					<p class="param__text">Квартира</p>
@@ -139,8 +146,6 @@
 				  <li class="param__item">
 					<p class="param__num">55,37<sub>м<sup>2</sup></sub></p>
 					<p class="param__text">Загальна площа</p>
-					<!--<span class="param__num param__num&#45;&#45;big">55,37<sub>м<sup>2</sup></sub></span>-->
-					<!--<span class="param__text param__text&#45;&#45;big">Загальна площа</span>-->
 				  </li>
 				  <li class="param__item">
 					<span class="param__num param__num--big">40,20<sub>м<sup>2</sup></sub></span>
@@ -154,9 +159,8 @@
 					<span class="param__num param__num--big">40,20<sub>м<sup>2</sup></sub></span>
 					<span class="param__text param__text--big">Житлова площа</span>
 				  </li>
-
 				</ul>
-				<a class="param__link param__link--bot" href="#">down</a>
+
 			  </div>
 			</div>
 		  </div>
@@ -188,7 +192,26 @@
 <!--/END all_wrapper-->
 
 
-<script async src="js/scripts.min.js"></script>
+<!--<script async src="js/scripts.min.js"></script>-->
+<script src="libs/jquery/dist/jquery.min.js"></script>
+<script src="libs/slick/slick.min.js"></script>
+<script>
+
+	$('.navigation__item').on('click', function (e) {
+		e.preventDefault()
+		$(this).toggleClass('color')
+	})
+
+	$(document).ready(function () {
+		$('.param__list').slick({
+			infinite: true,
+			vertical: true,
+			slidesToShow: 5,
+			slidesToScroll: 1,
+			verticalSwiping: true
+		})
+	})
+</script>
 
 </body>
 </html>
