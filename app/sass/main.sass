@@ -52,13 +52,17 @@ body
 @import "main-footer-style"
 //style for footer
 //===============================
-@import "apartments-style" // apartments page style
+@import "apartments-style"
+// apartments page style
 //===============================
-@import "room_style" //room page style
+@import "room_style"
+//room page style
 //===============================
-@import "_options_style" // options page style
+@import "options_style" // options page style
 //===============================
 @import "construction_style" // construction page style
+//===============================
+@import "contact-style" // contact page style
 //===============================
 .content
 	width: 100%
@@ -66,12 +70,11 @@ body
 	position: relative
 	z-index: 1
 	background-color: #f4ede7
-	//&__inner
-	//	background-color: rgba(#000000, .5)
-
-	//&__inner
-	//	+inner
+	&__inner
+		+inner
+		background-color: #cccccc
 		//position: relative
+
 	&__link
 		+fonts($EG_Bold, $main-color, 12, 24, 500)
 		font-weight: bold
@@ -79,6 +82,9 @@ body
 		position: absolute
 		border-bottom: 1px solid
 		transition: all 1s
+		background-color: greenyellow
+		z-index: 999
+
 		&:hover
 			transition: 1s
 			border-bottom: 1px solid red
@@ -180,6 +186,13 @@ body
 .main-btn-left
 	top: 50%
 	left: 50px
+	&::before
+		content: ''
+		width: 20px
+		height: 34px
+		background: url("../img/arrow-icon/arrow-left.png") no-repeat left center
+		padding-left: 25px
+
 .main-btn-right
 	top: 50%
 	right: 50px
@@ -188,7 +201,7 @@ body
 	left: 50%
 	right: 50%
 	margin: auto
-	transform: rotate(-90deg)
+	//transform: rotate(-90deg)
 //===============================
 .page-top
 	width: 100%
@@ -197,6 +210,10 @@ body
 		text-align: left
 	&__heading
 		+fonts($ZI, $main-color, 60, 50, 25)
+		&--construction
+			+fonts($ZI, $main-color, 48, 50, 25)
+		&--contact
+			+fonts($ZI, $main-color, 72, 60, 25)
 	&__caption
 		+fonts($EG_Bold, $main-color, 18, 22, 25)
 	&__text
