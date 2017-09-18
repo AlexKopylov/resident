@@ -4,7 +4,7 @@
 <head>
 
   <meta charset="utf-8">
-  <title>Title</title>
+  <title>room_page</title>
   <meta name="description" content="">
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,7 +39,7 @@
 			  <div class="lang">
 				<ul class="lang__list">
 				  <li class="lang__item" data-nav-item="1">
-					<a class="lang__link"  href="#">Укр</a>
+					<a class="lang__link" href="#">Укр</a>
 				  </li>
 				  <li class="lang__item">
 					<a class="lang__link" data-nav-item="2" href="#">Рус</a>
@@ -85,14 +85,20 @@
 
 	<div class="apartments">
 	  <div class="apartments__inner">
-		<h1 class="apartments__heading">Обрати квартиру</h1>
+
+		<div class="page-top">
+		  <h1 class="page-top__heading">Квартира 2г</h1>
+		</div>
+
 		<div class="page-nav">
 		  <ul class="page-nav__list">
 			<li class="page-nav__item" data-page-nav-item="1">
 			  <span class="page-nav__text">Обрати поверх</span>
 			</li>
 			<li class="page-nav__item" data-page-nav-item="2">
-			  <span class="page-nav__text">Підбір по параметрам</span>
+			  <a href="options_page.html">
+				<span class="page-nav__text">Підбір по параметрам</span>
+			  </a>
 			</li>
 			<li class="page-nav__item">
 			  <span class="page-nav__num">4</span>
@@ -107,30 +113,53 @@
 			</li>
 		  </ul>
 		</div>
+
 		<div class="windrose-wrap">
-		  <a href="#">
-			<img src="img/compass.png" alt="">
-		  </a>
+		  <img src="img/compass.png" alt="">
 		</div>
+
 		<div class="apartments__description">
 		  <div class="apartments__description-inner">
-			<div class="apartments__description-left">
-			  <div class="room-set">
-				<ul class="room-set__list">
-				  <li class="room-set__item">Придбана</li>
-				  <li class="room-set__item" data-cl="one">1 Кімната</li>
-				  <li class="room-set__item" data-cl="two">2 Кімнати</li>
-				  <li class="room-set__item" data-cl="three">3 Кімнати</li>
+			<div class="apartments__description-left apartments__description-left--roomer">
+			  <div class="roomer">
+				<ul class="roomer__list">
+				  <li class="roomer__item">
+					<a href="#" class="roomer__link">
+					  <i class="icon arrow_icon"></i>Завантажити PDF</a>
+				  </li>
+				  <li class="roomer__item">
+					<a href="#" class="roomer__link">
+					  <i class="icon key_icon"></i>Забронювати</a>
+				  </li>
+				  <li class="roomer__item">
+					<p class="roomer__text">План поверху</p>
+					<a href="apartments.html">
+					  <img src="img/room/small_plan.png" alt="icon">
+					</a>
+				  </li>
 				</ul>
 			  </div>
+			  <!--<div class="room-set">-->
+			  <!--<ul class="room-set__list">-->
+			  <!--<li class="room-set__item">Придбана</li>-->
+			  <!--<li class="room-set__item" data-cl="one">1 Кімната</li>-->
+			  <!--<li class="room-set__item" data-cl="two">2 Кімнати</li>-->
+			  <!--<li class="room-set__item" data-cl="three">3 Кімнати</li>-->
+			  <!--</ul>-->
+			  <!--</div>-->
 			</div>
 			<div class="apartments__description-center">
-			  <div class="img-wrap">
-				<a href="room.html">
-				<img src="img/plan.png" alt="dwe">
-				</a>
+			  <div class="room_info">
+				<div class="room_info__inner">
+				  <div class="room_info__img-wrap">
+					<img src="img/room/room1.png" alt="dwe">
+				  </div>
+				  <div class="room_info__btn-wrap">
+					<a class="room_info__btn" href="#">Дізнатися ціну</a>
+				  </div>
+				</div>
 			  </div>
-
+			  <!--/END room_info-->
 			</div>
 			<div class="apartments__description-right">
 			  <div class="param">
@@ -138,18 +167,24 @@
 				<ul class="param__list">
 
 				  <li class="param__item">
-					<p class="param__num">2Г</p>
-					<p class="param__text">Квартира</p>
-					<!--<span ></span>-->
-					<!--<span class="param__text"></span>-->
+					<p class="param__num param__num--big">55,37<sub>м<sup>2</sup></sub></p>
+					<p class="param__text param__text--big">Кухня</p>
 				  </li>
 				  <li class="param__item">
-					<span class="param__num">2</span>
-					<span class="param__text">К-сть кімнат</span>
+					<span class="param__num param__num--big">55,37<sub>м<sup>2</sup></sub></span>
+					<span class="param__text param__text--big">Лоджія</span>
 				  </li>
 				  <li class="param__item">
-					<p class="param__num">55,37<sub>м<sup>2</sup></sub></p>
-					<p class="param__text">Загальна площа</p>
+					<p class="param__num param__num--big">55,21<sub>м<sup>2</sup></sub></p>
+					<p class="param__text param__text--big">Загальна площа</p>
+				  </li>
+				  <li class="param__item">
+					<span class="param__num param__num--big">55,37<sub>м<sup>2</sup></sub></span>
+					<span class="param__text param__text--big">Спальня</span>
+				  </li>
+				  <li class="param__item">
+					<span class="param__num param__num--big">55,37<sub>м<sup>2</sup></sub></span>
+					<span class="param__text param__text--big">Загальна площа</span>
 				  </li>
 				  <li class="param__item">
 					<span class="param__num param__num--big">40,20<sub>м<sup>2</sup></sub></span>

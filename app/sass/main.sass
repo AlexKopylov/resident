@@ -54,7 +54,11 @@ body
 //===============================
 @import "apartments-style" // apartments page style
 //===============================
+@import "room_style" //room page style
 //===============================
+@import "_options_style" // options page style
+//===============================
+@import "construction_style" // construction page style
 //===============================
 .content
 	width: 100%
@@ -186,6 +190,18 @@ body
 	margin: auto
 	transform: rotate(-90deg)
 //===============================
+.page-top
+	width: 100%
+	text-align: center
+	&--construction
+		text-align: left
+	&__heading
+		+fonts($ZI, $main-color, 60, 50, 25)
+	&__caption
+		+fonts($EG_Bold, $main-color, 18, 22, 25)
+	&__text
+		+fonts($R_Reg, #596472, 12, 24, 25)
+
 //===============================
 .black-wrapper
 	position: absolute

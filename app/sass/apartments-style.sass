@@ -11,45 +11,27 @@
 		+fonts($ZI, $main-color, 60, 72, 25)
 	&__description
 		width: 100%
-		background-color: burlywood
+		//background-color: burlywood
 	&__description-inner
 		display: flex
 		justify-content: space-between
+		align-self: stretch
 	&__description-left
 		align-self: flex-end
+		width: 140px
+		&--roomer
+			align-self: center
 	&__description-center
 		width: calc(100% - 280px)
-		background-color: #fff
+		//background-color: #fff
 		text-align: center
 		height: 440px
 		position: relative
 	&__description-right
+		width: 140px
 		align-self: center
 .img-wrap
-	&:before
-		content: ''
-		width: 324px
-		height: 324px
-		border: 1px solid #000000
-		border-radius: 50%
-		position: absolute
-		top: 50%
-		left: 50%
-		transform: translate(-50%, -50%)
-		z-index: 1
-		opacity: .5
-	&:after
-		content: ''
-		width: 304px
-		height: 304px
-		border: 1px solid #000000
-		border-radius: 50%
-		position: absolute
-		top: 50%
-		left: 50%
-		transform: translate(-50%, -50%)
-		z-index: 0
-		opacity: .5
+
 	img
 		position: absolute
 		top: 50%
@@ -71,6 +53,10 @@
 		//background-color: green
 	&__text
 		+fonts($R_Bold, #596472, 12, 16, 25)
+		transition: all 1s
+		&:hover
+			text-shadow: 0 1px 3px red
+			transition: all 1s
 	&__num
 		+fonts($EG_Bold, $main-color, 36, 42, 25)
 

@@ -1,0 +1,77 @@
+@import "vars"
+
+.options
+	&__inner
+		+inner
+		padding-top: 100px
+
+
+	&__filter
+		+bWidth(1100, 1180)
+		margin: 0 0 0 auto
+	&__filter-inner
+		padding: 10px 50px 10px 20px
+		height: 500px
+		min-width: 180px
+		overflow: auto
+	&__list
+		width: 100%
+		//background-color: greenyellow
+		transition: all .7s
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		&:hover
+			background-color: #f0ae76
+			transition: all .7s
+	&__item
+		width: 25%
+		//background-color: green
+		text-align: center
+		+fonts($R_Reg, #4d4d4d, 12, 36, 200)
+
+//====================================
+//====================================
+
+/*==========  Desktop First  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px)
+	/**/
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px)
+	/**/
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 500px)
+	/**/
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px)
+	/**/
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px)
+	/**/
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px)
+	/**/
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px)
+	/**/
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px)
+	/**/
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px)
+	/**/
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px)
+	/**/

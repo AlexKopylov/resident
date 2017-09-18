@@ -1,0 +1,294 @@
+@import "vars"
+
+.construction
+	background-color: #f4ede7
+	&__inner
+		+inner
+		padding-top: 100px
+		position: relative
+	&__description
+		+bWidth(900, 1180)
+		margin: 0 auto
+		display: flex
+		justify-content: flex-start
+	&__left
+		width: 440px
+		padding: 0 10px
+		background-color: greenyellow
+	&__right
+		width: 460px
+		background-color: red
+		div
+			width: 100%
+			background-color: #fff
+			height: 180px
+			margin-bottom: 10px
+	&__web_btn-wrap
+		width: 100%
+		margin: 15px auto 0
+	&__web_btn
+		+aBtn
+		+fonts($EG_Bold, #fff, 14, 16, 100)
+		text-transform: uppercase
+		box-sizing: border-box
+		padding: 14px 0
+		background-color: #f0ae76
+		border-left: 3px solid #2b2e34
+
+		transition: all 1s
+		&:hover
+			&:hover
+			text-decoration: underline
+			transition: all 1s
+			text-shadow: 0 1px 3px red
+
+//====================================
+//====================================
+.status-page
+	background-color: #FFF
+	width: 100%
+
+	&__inner
+		+inner
+		padding-top: 160px
+		position: relative
+		display: flex
+		flex-wrap: nowrap
+		align-items: flex-start
+
+	&__descr-wrap
+		+bWidth(440, 1180)
+		order: 2
+		align-self: flex-start
+	&__descr-inner
+		width: 370px
+		margin: 45px 0 0 auto
+		padding: 5px 10px 0
+		box-sizing: border-box
+
+	&__heading
+		+fonts($R_Reg, $main-color, 36, 42, 25)
+		text-transform: uppercase
+	&__description
+		+fonts($R_Reg, $main-color, 16, 24, 25)
+		text-transform: uppercase
+	//=========== navIcon-wrap =========
+	&__navIcon-wrap
+		+bWidth(140, 1180)
+		order: 4
+		align-self: flex-end
+		position: absolute
+		bottom: 20px
+		left: 10px
+		&__navIcon-inner
+			width: 100%
+			img
+				+img-respons
+				height: 100%
+	//====================
+	&__render-wrap
+		+bWidth(600, 1180)
+		order: 3
+
+	&__render-inner-wrap
+		position: relative
+	&__render-inner
+		width: 100%
+		position: absolute
+		top: 0
+		left: 0
+		overflow: hidden
+		z-index: 2
+		min-height: 15%
+		height: 60%
+		transition: height .7s
+		img
+			+img-respons
+	&__status-rend-inner
+		width: 100%
+		img
+			+img-respons
+	//============ status-bar ========
+	&__status-bar-wrap
+		+bWidth(440, 1180)
+		order: 5
+		align-self: flex-end
+		position: absolute
+		bottom: 0
+		left: 12%
+	&__status-bar-inner
+		width: 370px
+		padding: 0 10px
+		margin: 0 0 0 auto
+	&__status-bar-text
+		+fonts($R_Reg, $main-color, 14, 24, 25)
+	&__status-bar
+		display: flex
+		flex-wrap: nowrap
+		margin: 25px auto 0
+	&__box-wrap
+		width: 25%
+		text-align: center
+		position: relative
+
+		span
+			+fonts($R_Reg, $main-color, 16, 42, 25)
+			text-transform: uppercase
+			text-align: center
+		p
+			+fonts($R_Reg, $main-color, 12, 14, 25)
+	&__box
+		background-color: #f1f1f1
+		width: 57%
+		height: 204px
+		position: relative
+		margin: 0 auto
+		cursor: pointer
+		&:hover ~ .status-page__stat
+			transition: opacity .1s ease-in-out, transform .5s ease-in-out
+			opacity: 1
+			transform: rotate3d(0, 0, 0, -45deg)
+
+	//=========== btn ===========
+	&__btn-wrap
+		+bWidth(140, 1180)
+		order: 1
+		align-self: flex-start
+		margin: 150px 0 0 0
+	&__btn
+		text-align: center
+		&_big
+			padding: 8px 0
+		&_sm
+			padding: 10px 0
+		&__btn-bar-text
+			+fonts($R_Reg, $main-color, 14, 18, 25)
+	&__btn-link
+		+fonts($R_Reg, #fff, 10, 20, 100)
+		text-transform: uppercase
+
+		margin: 7px 0
+
+//=========== /END btn ===========
+.box-corner
+	&__top, &__bottom
+		position: absolute
+		width: 18px
+		height: 18px
+		color: $main-color
+	&__top
+		top: 0
+		border-top: 1px solid
+	&__bottom
+		bottom: 0
+		border-bottom: 1px solid
+	&__left
+		left: 0
+		border-left: 1px solid
+	&__right
+		right: 0
+		border-right: 1px solid
+	&__box-inner
+		position: absolute
+		left: 0
+		width: 100%
+		z-index: 1
+		background-color: $main-color
+		bottom: 0
+		height: 60%
+		transition: height .7s
+//====================
+.status-page__stat
+	transition: opacity .1s ease-in-out, transform .5s ease-in-out
+	width: 240px
+	opacity: 0
+	transform: rotate3d(1, 1, 0, 90deg)
+	transform-origin: 0 100%
+	position: absolute
+	z-index: 999
+	bottom: 105%
+	left: 10px
+	margin: auto
+	background-color: #f1f1f1
+	padding: 5px
+	text-align: center
+	&::before
+		content: ''
+		width: 20px
+		border: 10px solid transparent
+		border-top: 10px solid $main-color
+		position: absolute
+		z-index: 999
+		top: 100%
+		left: 10%
+
+.status-page__stat-text
+	+fonts($R_Reg, $main-color, 12, 14, 25)
+	text-transform: lowercase
+	display: inline-block
+
+//====================================
+//====================================
+.page__link
+	+fonts($EG_Bold, #000, 10, 12, 500)
+	+aBtn
+	width: 140px
+	position: absolute
+	top: 50%
+	transform: translate(0, -50%)
+	&--left
+		left: 0
+		&::before
+			width: 20px
+			height: 36px
+			position: absolute
+			top: 0
+			left: 0
+			background: url("../img/construction/arrow_left_icon.png") no-repeat
+	&--right
+		left: auto
+		right: 0
+//====================================
+
+/*==========  Desktop First  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px)
+	/**/
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px)
+	/**/
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 500px)
+	/**/
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px)
+	/**/
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px)
+	/**/
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px)
+	/**/
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px)
+	/**/
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px)
+	/**/
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px)
+	/**/
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px)
+	/**/
