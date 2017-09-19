@@ -79,34 +79,62 @@
   </header>
   <!--/END top-head-->
 
-  <main class="content" role="main">
+  <main class="content" data-content="bg" role="main">
 	<div class="content__inner">
+
+	  <div class="content__link-wrap left-btm-link">
+		<i class="content__icon content__icon--arrow-left"></i>
+		<a class="content__link content__link--left" href="contact.html">Контакти</a>
+	  </div>
+
+	  <div class="content__link-wrap right-btm-link">
+		<a class="content__link content__link--right" href="contact.html">Обрати <br> квартиру</a>
+		<i class="content__icon content__icon--arrow-right"></i>
+	  </div>
+
+	  <div class="content__link-wrap center-btm-link">
+		<i class="content__icon content__icon--arrow-left"></i>
+		<a class="content__link" href="contact.html">Переваги</a>
+	  </div>
 
 	  <div class="contact">
 		<div class="contact__inner">
-		  <div class="page-top">
-			<h1 class="page-top__heading page-top__heading--contact">Контакти</h1>
+		  <div class="page-heading">
+			<div class="page-top">
+			  <h1 class="page-top__heading page-top__heading--contact">Контакти</h1>
+			</div>
+			<h2 class="page-top__caption page-top__caption--contact">У Вас виникли запитання?</h2>
 		  </div>
+
 		  <div class="contact__form-wrap">
 			<form action="" class="contact__form">
-			  <input type="text" placeholder="Ім’я:">
-			  <input type="tel" placeholder="Телефон:">
-			  <input type="email" placeholder="E-mail:">
+			  <input class="contact__form-input" type="text" placeholder="Ім’я:">
+			  <input class="contact__form-input" type="tel" placeholder="Телефон:">
+			  <input class="contact__form-input" type="email" placeholder="E-mail:">
 			  <textarea class="contact__message" name="" id="" placeholder="Повідомлення:"></textarea>
 			  <button class="contact__form-btn" type="submit">send</button>
 			</form>
 		  </div>
 		  <!--/END contact__form-wrap-->
-		  <div class="contact__list">
-			<li class="contact__item">123</li>
-			<li class="contact__item">123</li>
-			<li class="contact__item">12</li>
-		  </div>
+		  <ul class="contact__list">
+			<li class="contact__item" data-contact-item="1">
+			  <span class="contact__item-text">+3 8 (093) 55-66-77</span>
+			  <span class="contact__item-text">+3 8 (083) 15-16-87</span>
+			</li>
+			<li class="contact__item" data-contact-item="2">
+			  <span class="contact__item-text">м. Київ, вул. Володимирська 15</span>
+			  <span class="contact__item-text">м. Тараса Шевченка</span>
+			</li>
+			<li class="contact__item" data-contact-item="3">
+			  <span class="contact__item-text">Resident@house</span>
+			  <span class="contact__item-text">Riverside@gmail.com</span>
+			</li>
+		  </ul>
 		</div>
 	  </div>
 
-
 	</div>
+
   </main>
   <!--/END content-->
 

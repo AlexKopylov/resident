@@ -7,7 +7,7 @@
 		max-width: 900px
 		width: 100%
 		margin: 0 auto
-		background-color: greenyellow
+		//background-color: greenyellow
 		padding: 0 40px
 
 
@@ -23,9 +23,48 @@
 		justify-content: space-between
 		align-self: flex-start
 		flex-wrap: wrap
+	&__form-input
+		border: 1px solid #b2b2b2
+		background-color: transparent
+		+bWidth(240, 758)
+		box-sizing: border-box
+		+fonts($R_Reg, #000, 14, 30, 25)
+		font-weight: 300
+		font-style: italic
+		padding: 9px 0 9px 20px
+		margin-bottom: 15px
+		position: relative
+		z-index: 1
+		&::after
+			content: '*'
+			position: absolute
+			top: 0
+			right: 0
+			z-index: 10
+
 	&__message
 		width: 100%
+		background-color: transparent
+		margin-bottom: 15px
+		padding-top: 20px
+		padding-left: 20px
+		height: 120px
+
 	&__form-btn
+		+aBtn
+		width: 440px
+		+fonts($EG_Bold, #fff, 20, 36, 100)
+		text-transform: uppercase
+		box-sizing: border-box
+		padding: 14px 0
+		background-color: #f0ae76
+		border: none
+		border-left: 3px solid #2b2e34
+		outline: none
+		margin: 0 auto
+
+
+
 
 
 	&__list
@@ -33,11 +72,44 @@
 		display: flex
 		justify-content: space-between
 		align-items: center
+		margin-top: 20px
 	&__item
-		width: 220px
-		background-color: green
-		height: 60px
+		width: 240px
+		+bWidth(240, 758)
+		height: 50px
 		padding-left: 50px
+		position: relative
+
+	&__item-text
+		+fonts($R_Reg, #596472, 12, 24, 25)
+		display: block
+
+[data-contact-item="1"]::before
+	content: ''
+	background: url("../img/top_icon/phone_icon.png") no-repeat center top
+	width: 22px
+	height: 23px
+	position: absolute
+	top: 25%
+	left: 5%
+[data-contact-item="2"]
+	width: 240px
+	&::before
+		content: ''
+		background: url("../img/top_icon/map_icon.png") no-repeat center top
+		width: 22px
+		height: 23px
+		position: absolute
+		top: 25%
+		left: 5%
+[data-contact-item="3"]::before
+	content: ''
+	background: url("../img/top_icon/mail_icon.png") no-repeat center top
+	width: 22px
+	height: 23px
+	position: absolute
+	top: 25%
+	left: 5%
 //====================================
 //====================================
 //====================================
@@ -52,13 +124,39 @@
 	/**/
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 500px)
+@media only screen and (max-width : 768px)
 	/**/
-
+	.contact
+		padding-top: 80px
+	.contact__form-wrap
+		padding: 15px
+	.contact__form-input
+		width: 100%
+		margin-bottom: 10px
+	.contact__form-btn
+		padding: 10px 0
+/* Small Devices, Tablets */
+@media only screen and (max-width : 750px)
+	/**/
+	.contact__list
+		display: none
+/* Small Devices, Tablets */
+@media only screen and (max-width : 600px)
+	/**/
+	.contact__inner
+		padding: 0 25px
+	.contact__form-wrap
+		padding: 5px
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	/**/
-
+	.contact__inner
+		padding: 0
+	.contact__form-input
+		padding: 3px 0 3px 20px
+	.contact__form-btn
+		width: 100%
+		padding: 5px 0
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/

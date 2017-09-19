@@ -3,9 +3,8 @@
 .footer
 	background-color: rgba(#f4ede7, .8)
 	width: 100%
-	//position: fixed
-	//bottom: 0
-	//z-index: 999
+	position: relative
+	z-index: 999
 	&__inner
 		+inner
 		display: flex
@@ -33,9 +32,9 @@
 		text-indent: -99999px
 		margin-left: 15px
 
-	/*==========  Desktop First  ==========*/
+/*==========  Desktop First  ==========*/
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 500px)
+@media only screen and (max-width: 500px)
 	/**/
 	.footer__inner
 		flex-wrap: wrap

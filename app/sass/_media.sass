@@ -9,18 +9,62 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	/**/
-
+	.page-heading
+	.page-top__caption--contact::before
+		left: 10%
+	.page-top__caption--contact::after
+		right: 10%
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	/**/
+	.page-heading
+		padding: 0
+		height: 110px
+	.page-heading::before
+		width: 300px
+		height: 300px
+	.page-heading::after
+		width: 285px
+		height: 285px
 
+	.page-top__caption--contact::before
+		left: 5%
+	.page-top__caption--contact::after
+		right: 5%
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 700px)
+	/**/
+	.page-top__caption--contact::before
+		width: 10%
+	.page-top__caption--contact::after
+		width: 10%
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 600px)
+	/**/
+	.page-top__caption--contact::before,
+	.page-top__caption--contact::after
+		display: none
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	/**/
-
+	.page-heading
+		height: 80px
+	.page-top__heading--contact
+		font-size: 3em
+	.page-top__caption--contact
+		font-size: 1.5em
+		line-height: 1.2
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/
+	.page-heading::before
+		width: 260px
+		height: 260px
+	.page-heading::after
+		width: 245px
+		height: 245px
 
 /*==========  Mobile First  ==========*/
 
