@@ -69,6 +69,8 @@ body
 @import "contact-style"
 // contact page style
 //===============================
+@import "news-list-style" // news-list page style
+//===============================
 
 .content
 	width: 100%
@@ -308,6 +310,19 @@ body
 		left: 0
 		right: 0
 		margin: auto
+	&--news
+		height: auto
+		&::before
+			width: 186px
+			height: 186px
+			top: auto
+			bottom: 0
+		&::after
+			width: 176px
+			height: 176px
+			top: auto
+			bottom: 6px
+
 //===============================
 .page-top
 	width: 100%

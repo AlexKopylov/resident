@@ -1,0 +1,134 @@
+@import "vars"
+
+.news
+	width: 100%
+	padding-top: 100px
+	&__inner
+		max-width: 900px
+		width: 100%
+		margin: 0 auto
+		padding: 0
+		//background-color: greenyellow
+	&__list-wrap
+		width: 100%
+		margin-top: 15px
+		//background-color: darkgreen
+	&__list
+		width: 100%
+		display: flex
+		justify-content: space-between
+	&__item
+		+bWidth(295, 900)
+		position: relative
+		//background-color: #ebe1d9
+	&__data-time-wrap
+		width: 100%
+		padding: 0 10px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		position: absolute
+		top: 0
+	&__data,
+	&__time
+		+fonts($EG_Bold, $main-color, 10, 30, 25)
+	&__img-wrap
+		width: 100%
+		img
+			+img-respons
+	&__text-wrap
+		border: 1px solid #ebe1d9
+		border-top: none
+		padding: 0 10px
+	&__heading
+		+fonts($EG_Bold, $main-color, 18, 45, 25)
+	&__desrc
+		+fonts($R_Reg, #596472, 12, 24, 25)
+		text-align: justify
+
+	&__link
+		+aBtn
+		width: 50%
+		+fonts($EG_Bold, #fff, 14, 24, 100)
+		text-transform: uppercase
+		box-sizing: border-box
+		padding: 3px 0
+		background-color: #f0ae76
+		border-left: 3px solid #2b2e34
+		margin: 20px 0 15px auto
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+	.news__inner
+		padding: 0 25px
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	/**/
+	.news__text-wrap
+		padding: 0 2px
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	/**/
+	.news__list
+		//overflow: auto
+	.news__item
+		width: 49%
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 700px)
+	/**/
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 600px)
+	/**/
+	.news__list
+		flex-wrap: wrap
+	.news__item
+		width: 100%
+		display: flex
+		margin-bottom: 10px
+	.news__data-time-wrap
+		width: 50%
+		right: 0
+	.news__img-wrap
+		width: 50%
+	.news__text-wrap
+		width: 50%
+		border: 1px solid #ebe1d9
+		border-left: none
+		padding: 10px 5px 5px
+	.news__link
+		margin: 0 0 0 auto
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+
