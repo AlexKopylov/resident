@@ -12,11 +12,9 @@
 	.page-top__heading--manager
 		+fonts($ZI, $main-color, 48, 72, 25)
 
-
-
-	//.page-heading
 	.page-top__caption--contact::before
 		left: 10%
+
 	.page-top__caption--contact::after
 		right: 10%
 /* Small Devices, Tablets */
@@ -43,9 +41,8 @@
 	/**/
 	[data-content="main"]
 		background: url("../img/main_page/bg-last-small.jpg") no-repeat center top / cover
+		min-height: 100vh
 
-		min-width: 430px
-		height: 600px
 	.page-top__caption--contact::before
 		width: 10%
 	.page-top__caption--contact::after
@@ -63,6 +60,10 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	/**/
+	[data-content="main"]
+		background: url("../img/main_page/bg-last-small.jpg") no-repeat center top / cover
+		min-height: 430px
+
 	.page-heading
 		height: 80px
 	.page-top__heading--contact

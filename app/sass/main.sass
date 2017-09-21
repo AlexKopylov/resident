@@ -50,6 +50,9 @@ body
 //============= header ==========
 @import "main-header-style"
 //style for header
+//============= top-menu ==========
+@import "top-menu-style" // style for top-menu
+@import "menu-style-wrap" // wrap style for top-menu
 //============= footer ==========
 @import "main-footer-style"
 //style for footer
@@ -78,30 +81,26 @@ body
 
 .content
 	width: 100%
-	height: 100%
 	position: relative
 	z-index: 1
 	&__inner
 		+inner
-		height: calc(100vh - 30px)
 		position: relative
 
+
 	&__link-wrap
-		//width: 140px
-		//height: 36px
 		overflow: hidden
 		cursor: pointer
-		//background-color: green
 		display: flex
 		align-self: center
 		position: absolute
 		z-index: 9999
 
+		//display: none
+
 	&__link
 		+fonts($EG_Bold, $main-color, 12, 24, 500)
 		+aBtn
-		//vertical-align: middle
-
 		&--left
 			padding-left: 5px
 		&--right
@@ -127,41 +126,33 @@ body
 			height: 36px
 			transform: rotate(90deg)
 
-
 .left-btm-link
 	top: 50%
 	left: 10px
 	transform: translate(0, -50%)
-
 
 .right-btm-link
 	top: 50%
 	right: 10px
 	transform: translate(0, -50%)
 
-
 .center-btm-link
-	bottom: 40px
+	bottom: 70px
 	left: 0
 	right: 0
 	margin: auto
 	transform: rotate(-90deg)
 	width: 140px
 
-
-
-
 .main-btn-center
 	bottom: 5%
 	left: 50%
 	right: 50%
 	margin: auto
-//transform: rotate(-90deg)
 //===============================
 [data-content="main"]
 	background: url("../img/main_page/bg-last.jpg") no-repeat center top / cover
-	margin-bottom: -30px
-	height: 100vh
+	min-height: 100vh
 [data-content="bg"]
 	background-color: #f4ede7
 	margin-bottom: -30px
@@ -257,6 +248,35 @@ body
 	&__text
 		+fonts($R_Reg, #596472, 12, 24, 25)
 
+//===============================
+.icon
+	width: 10px
+	height: 10px
+	display: inline-block
+	position: absolute
+	top: 0
+	left: 0
+
+.arrow_icon
+	background: url("../img/room/arrow_icon.png") no-repeat left top
+	top: 4px
+	left: -15px
+
+.key_icon
+	background: url("../img/room/key_icon.png") no-repeat left top
+	width: 9px
+	height: 9px
+	top: 3px
+	left: -15px
+
+.top-menu-icon
+	background: url("../img/main_page/top-menu/phone_icon.png") no-repeat left top
+	width: 14px
+	height: 15px
+	top: -15px
+	left: 0
+	right: 0
+	margin: auto
 //===============================
 .black-wrapper
 	position: absolute
