@@ -53,6 +53,8 @@ body
 //============= top-menu ==========
 @import "top-menu-style" // style for top-menu
 @import "menu-style-wrap" // wrap style for top-menu
+//============= 404 ==========
+@import "404-style" // style for page 404
 //============= footer ==========
 @import "main-footer-style"
 //style for footer
@@ -96,8 +98,6 @@ body
 		position: absolute
 		z-index: 9999
 
-		//display: none
-
 	&__link
 		+fonts($EG_Bold, $main-color, 12, 24, 500)
 		+aBtn
@@ -110,6 +110,7 @@ body
 		&--center
 			padding-top: 5px
 			+fonts($EG_Bold, $main-color, 12, 16, 500)
+
 	&__icon
 		display: inline-block
 		&--arrow-left
@@ -155,8 +156,10 @@ body
 	min-height: 100vh
 [data-content="bg"]
 	background-color: #f4ede7
-	margin-bottom: -30px
 	height: 100vh
+//[data-content="404"]
+//	background: url("../img/404/404_bg.png") no-repeat center top  / cover
+//	min-height: 100vh
 //===============================
 
 //===============================

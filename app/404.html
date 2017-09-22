@@ -17,151 +17,43 @@
 
   <link rel="stylesheet" href="css/main.min.css">
 
-  <style>
-	.page404 {
-	  position: relative;
-	  width: 100%;
-	  height: 100vh;
-	}
-
-	.page404__inner {
-	  position: absolute;
-	  top: 50%;
-	  left: 50%;
-	  transform: translate(-50%, -50%);
-	  text-align: center;
-	}
-
-	.page404__logo {
-	  font-size: 90px;
-	}
-
-	.page404__link {
-	  font-size: 24px;
-	  background-color: green;
-	  display: block;
-	  width: 100%;
-	  color: #000;
-	}
-  </style>
 </head>
 <body>
 <div class="all_wrapper">
-  <header class="top-head">
-	<div class="top-head__inner">
-	  <div class="top-head__left">
-		<a href="index.html" class="top-head__logo">
-		  <img src="img/logo.png" alt="logo-icon">
-		</a>
-	  </div>
-	  <div class="top-head__right">
-		<nav class="navigation">
-		  <ul class="navigation__list">
-			<li class="navigation__ite1">
-			  <div class="lang">
-				<ul class="lang__list">
-				  <li class="lang__item" data-nav-item="1">
-					<a class="lang__link" href="#">Укр</a>
-				  </li>
-				  <li class="lang__item">
-					<a class="lang__link" data-nav-item="2" href="#">Рус</a>
-				  </li>
-				  <li class="lang__item" data-nav-item="3">
-					<a class="lang__link" href="#">Eng</a>
-				  </li>
-				</ul>
-			  </div>
-			</li>
-			<li class="navigation__item">
-			  <a href="#" class="navigation__link">
-				<i class="nav_icon">123</i>
-				<!--заказать звонок-->
-			  </a>
-			</li>
-			<li class="navigation__item">
-			  <a href="#" class="navigation__link">
-				<i class="nav_icon2">221</i>
-				<!--карта-->
-			  </a>
-			</li>
-			<li class="navigation__item">
-			  <a href="#" class="navigation__link">
-				<i class="nav_icon3">221</i>
-				<!--почта-->
-			  </a>
-			</li>
-			<li class="navigation__item">
-			  <a href="#" class="navigation__link">
-				<i class="nav_icon4">3221</i>
-				<!--меню-->
-			  </a>
-			</li>
-		  </ul>
-		</nav>
-	  </div>
-	</div>
-  </header>
-  <!--/END top-head-->
-
-  <main class="content" data-content="main" role="main">
-	<div class="content__inner">
+  <main class="content" data-content="404" role="main">
+	<!--<div class="content__inner">-->
 
 	  <div class="page404">
 		<div class="page404__inner">
-		  <h1 class="page404__logo">404</h1>
-		  <a class="page404__link" href="index.html">HOME</a>
-		</div>
-	  </div>
+		  <h1 class="page404__heading">404</h1>
 
+		  <div class="page404__text-wrap">
+			<p class="page404__description">Помилка</p>
+			<p class="page404__text">Сторінка не знайдена</p>
+		  </div>
 
-	</div>
+		  <div class="page404__link-wrap">
+		  	<a class="page404__link" href="404.html">Назад</a>
+		  	<a class="page404__link" href="index.html">На головну</a>
 
-  </main>
-  <!--/END content-->
-
-  <footer class="footer">
-	<div class="footer__inner">
-	  <div class="footer__left">
-		<p class="footer__text"> &#169; 2017 Philadelphia усі права захищено.</p>
-	  </div>
-	  <div class="footer__right">
-		<div class="smart">
-		  <div class="smart__logo-wrap">
-			<div class="smart__text">Розробка сайту</div>
-			<a href="#" class="smart__link">smart-link</a>
 		  </div>
 		</div>
-		<!--/END smart-->
+		<!--/END page404__inner-->
 	  </div>
-	</div>
-  </footer>
-  <!--/END footer-->
+	  <!--/END page404-->
+
+
+	<!--</div>-->
+	<!--/END content__inner-->
+  </main>
+  <!--/END content-->
 </div>
 <!--/END all_wrapper-->
-
 
 <!--<script async src="js/scripts.min.js"></script>-->
 <script src="libs/jquery/dist/jquery.min.js"></script>
 <script src="libs/slick/slick.min.js"></script>
 <script src="js/common.js"></script>
-<script>
-
-	$('.navigation__item').on('click', function (e) {
-		e.preventDefault()
-		$(this).toggleClass('color')
-	})
-
-	$(document).ready(function () {
-		$('.param__list').slick({
-			infinite: true,
-			vertical: true,
-			slidesToShow: 5,
-			slidesToScroll: 1,
-			verticalSwiping: true
-		})
-	})
-</script>
-
 
 </body>
 </html>

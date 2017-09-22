@@ -32,9 +32,10 @@
 			<div class="top-menu__inner">
 			  <div class="top-menu__list-wrap">
 				<div class="top-menu__list">
+
 				  <div class="about">
 					<ul class="about__list">
-					  <h2 class="top-menu__heading">ПРО ПРОЕКТ:</h2>
+					  <li class="top-menu__heading">ПРО ПРОЕКТ:</li>
 					  <li class="about__item"><a class="about__link" href="404.html">Головна</a></li>
 					  <li class="about__item"><a class="about__link" href="404.html">Квартири</a></li>
 					  <li class="about__item"><a class="about__link" href="404.html">Будинок</a></li>
@@ -42,14 +43,14 @@
 					  <li class="about__item"><a class="about__link" href="404.html">Переваги</a></li>
 					  <li class="about__item"><a class="about__link" href="404.html">Розташування</a></li>
 					  <li class="about__item"><a class="about__link" href="404.html">Цінності</a></li>
-					  <li class="about__item"><a class="about__link" href="404.html">Контакти</a></li>
+					  <li class="about__item"><a class="about__link" href="contact.html">Контакти</a></li>
 					</ul>
 				  </div>
 				  <!--/END about-->
 
 				  <div class="project">
 					<ul class="project__list">
-					  <h2 class="top-menu__heading">ХІД ПРОЕКТУ:</h2>
+					  <li class="top-menu__heading">ХІД ПРОЕКТУ:</li>
 					  <li class="project__item">
 						<a class="project__link" href="404.html">Веб-камера</a>
 					  </li>
@@ -91,7 +92,7 @@
 
 				  <div class="for-sale">
 					<ul class="for-sale__list">
-					  <h2 class="for-sale__heading">ВІДДІЛ ПРОДАжУ:</h2>
+					  <li class="for-sale__heading">ВІДДІЛ ПРОДАжУ:</li>
 					  <li class="for-sale__item" data-main__bot-item="1">
 						<a href="#" class="for-sale__link">вул. Володимирська 15</a>
 					  </li>
@@ -103,6 +104,7 @@
 					  </li>
 					</ul>
 				  </div>
+				  <!--/END for-sale-->
 
 				  <div class="callback-wrap">
 					<div class="callback">
@@ -129,7 +131,6 @@
 		</div>
 	  </div>
 	</div>
-
 
 	<div class="top-head__inner">
 	  <div class="top-head__left">
@@ -176,7 +177,6 @@
 			<li class="navigation__item" id="menu-btn">
 			  <a href="#" class="navigation__link">
 				<i class="nav_icon4">3221</i>
-				<!--меню-->
 			  </a>
 			</li>
 		  </ul>
@@ -188,10 +188,10 @@
 
   <main class="content" data-content="main" role="main">
 	<div class="content__inner">
-
+	  <!-- NAVIGATION LINK on page-->
 	  <div class="content__link-wrap left-btm-link">
 		<i class="content__icon content__icon--arrow-left"></i>
-		<a class="content__link content__link--left" href="404.html">Розташування</a>
+		<a class="content__link content__link--left" href="404.html">Локація</a>
 	  </div>
 
 	  <div class="content__link-wrap right-btm-link">
@@ -203,6 +203,7 @@
 		<i class="content__icon content__icon--arrow-center"></i>
 		<a class="content__link content__link--center" href="404.html">Переваги</a>
 	  </div>
+	  <!-- /END NAVIGATION LINK on page-->
 
 	  <div class="main">
 		<div class="main__inner">
@@ -272,7 +273,6 @@
 </div>
 <!--/END all_wrapper-->
 
-
 <!--<script async src="js/scripts.min.js"></script>-->
 <script src="libs/jquery/dist/jquery.min.js"></script>
 <script src="libs/slick/slick.min.js"></script>
@@ -280,11 +280,6 @@
 
 <script src="js/common.js"></script>
 <script>
-
-	//	$('.navigation__item').on('click', function (e) {
-	//		e.preventDefault()
-	//		$(this).toggleClass('color')
-	//	})
 
 	$(document).ready(function () {
 		$('.param__list').slick({
