@@ -1,0 +1,174 @@
+@import "vars"
+
+.location
+	width: 100%
+	&__inner
+		display: flex
+		justify-content: flex-start
+		align-self: center
+	&__left
+		width: 50%
+		background-color: $bg-color
+		padding-top: 100px
+	&__left-inner
+		width: 100%
+		max-width: 600px
+		padding-left: 10px
+		margin: 0 0 0 auto
+	&__right
+		width: 50%
+		background-color: orangered
+		height: 100vh
+
+	&__page-heading
+		width: 100%
+		position: relative
+		z-index: 1
+		padding: 40px 0 10px
+		&::before
+			content: ''
+			width: 340px
+			height: 340px
+			border: 1px solid $border-color
+			border-radius: 50%
+			position: absolute
+			z-index: -1
+			top: 60px
+			left: 50%
+			transform: translate(-50%, 0)
+		&::after
+			content: ''
+			width: 324px
+			height: 324px
+			border: 1px solid $border-color
+			border-radius: 50%
+			position: absolute
+			z-index: -1
+			top: 68px
+			left: 50%
+			transform: translate(-50%, 0)
+
+	&__page-heading-top
+		text-align: center
+		position: relative
+		z-index: 2
+	&__heading
+		+fonts($ZI, $main-color, 60, 84, 25)
+	&__page-heading-bot
+		text-align: center
+		position: relative
+		z-index: 1
+		&::before
+			content: ''
+			position: absolute
+			z-index: 2
+			top: 60%
+			left: 0
+			height: 1px
+			background-color: $orange-color
+			+bWidth(80, 600)
+		&::after
+			content: ''
+			position: absolute
+			z-index: 2
+			top: 60%
+			right: 0
+			height: 1px
+			background-color: $orange-color
+			+bWidth(80, 600)
+	&__caption
+		+fonts($EG_Bold, $main-color, 30, 40, 25)
+
+	&__description-wrap
+		position: relative
+		z-index: 5
+		width: 350px
+		margin: 0 auto
+		padding: 0
+	&__description
+		width: 100%
+		height: 170px
+		overflow-y: auto
+		padding: 0 10px
+	&__description-text
+		+fonts($R_Reg, #596472, 12, 24, 25)
+		text-align: justify
+
+
+	&__list-wrap
+		width: 100%
+		margin-top: 60px
+		padding-right: 15px
+	&__list
+		width: 100%
+		padding-top: 25px
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		align-items: stretch
+	&__item
+		width: 180px
+		+bWidth(180, 575)
+		box-sizing: border-box
+		padding-left: 36px
+		margin-bottom: 40px
+		position: relative
+		&::before
+			top: -7px
+
+	&__item-text
+		+fonts($R_Reg ,#596472, 12, 20, 25)
+		display: inline-block
+		width: 100%
+		strong
+			display: block
+			width: 100%
+
+[data-location__item="1"]
+	&::before
+		content: '5'
+		+fonts($EG_Bold ,#596472, 36, 36, 25)
+		position: absolute
+		left: 0
+
+[data-location__item="2"]
+	&::before
+		content: '5'
+		+fonts($EG_Bold ,#596472, 36, 36, 25)
+		position: absolute
+		left: 0
+
+[data-location__item="3"]
+	&::before
+		content: '15'
+		+fonts($EG_Bold ,#596472, 36, 36, 25)
+		position: absolute
+		left: -10px
+
+[data-location__item="4"]
+	&::before
+		content: '10'
+		+fonts($EG_Bold ,#596472, 36, 36, 25)
+		position: absolute
+		left: -10px
+
+[data-location__item="5"]
+	&::before
+		content: '10'
+		+fonts($EG_Bold ,#596472, 36, 36, 25)
+		position: absolute
+		left: -10px
+
+[data-location__item="6"]
+	&::before
+		content: '10'
+		+fonts($EG_Bold ,#596472, 36, 36, 25)
+		position: absolute
+		left: -10px
+
+//====================================
+
+/*==========  Desktop First  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px)
+	/**/

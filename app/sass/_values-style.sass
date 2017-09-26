@@ -1,0 +1,156 @@
+@import "vars"
+
+.values
+	+bWidth(640, 1180)
+	height: 100vh
+	padding-top: 100px
+	&__inner
+		padding: 0 20px
+	&__page-heading
+		width: 100%
+		position: relative
+		z-index: 1
+		padding: 40px 0
+		&::before
+			content: ''
+			width: 216px
+			height: 216px
+			border: 1px solid $border-color
+			border-radius: 50%
+			position: absolute
+			z-index: -1
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+		&::after
+			content: ''
+			width: 198px
+			height: 198px
+			border: 1px solid $border-color
+			border-radius: 50%
+			position: absolute
+			z-index: -1
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+
+	&__page-heading-top
+		text-align: center
+		position: relative
+		z-index: 2
+	&__heading
+		+fonts($ZI, $main-color, 72, 100, 25)
+	&__page-heading-bot
+		text-align: center
+		position: relative
+		z-index: 2
+		&::before
+			content: ''
+			position: absolute
+			z-index: 2
+			top: 60%
+			left: 0
+			height: 1px
+			background-color: $orange-color
+			+bWidth(80, 600)
+		&::after
+			content: ''
+			position: absolute
+			z-index: 2
+			top: 60%
+			right: 0
+			height: 1px
+			background-color: $orange-color
+			+bWidth(80, 600)
+	&__caption
+		+fonts($EG_Bold, $main-color, 30, 40, 25)
+
+	&__list-wrap
+		+bWidth(480, 600)
+		margin: 0 0 0 auto
+	&__list
+		width: 100%
+		display: flex
+		justify-content: flex-start
+		align-items: flex-start
+		flex-wrap: wrap
+	&__item
+		+fonts($R_Reg, #596472, 12, 24, 25)
+		width: 50%
+		position: relative
+		padding-left: 20px
+		margin-bottom: 40px
+		&::before
+			content: ''
+			width: 9px
+			height: 9px
+			border-radius: 50%
+			background-color: #d6bba8
+			position: absolute
+			top: 8px
+			left: 5px
+
+//===============================
+//===============================
+/*==========  Desktop First  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 992px)
+	/**/
+	.values__list-wrap
+		margin: 50px auto 0
+		width: 100%
+	.values__item
+		margin-bottom: 10px
+/* Small Devices, Tablets */
+@media only screen and (max-width: 800px)
+	/**/
+	.values__heading
+		+fonts($ZI, $main-color, 60, 100, 25)
+	.values__page-heading-bot::before,
+	.values__page-heading-bot::after
+		display: none
+	.values__caption
+		+fonts($EG_Bold, $main-color, 28, 40, 25)
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px)
+	/**/
+	.values__item
+		width: 100%
+/* Small Devices, Tablets */
+@media only screen and (max-width: 600px)
+	/**/
+	.values
+		width: 100%
+		padding-top: 80px
+	.values__page-heading
+		padding: 0
+	.values__heading
+		line-height: .8
+
+	.values__page-heading::before
+		width: 200px
+		height: 200px
+		top: 0
+		transform: translate(-50%, 0)
+	.values__page-heading::after
+		width: 186px
+		height: 186px
+		top: 7px
+		transform: translate(-50%,0)
+
+	.values__list-wrap
+		margin: 20px auto 0
+		height: 120px
+		overflow-y: auto
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px)
+	/**/
+	.values
+		padding-top: 65px
+	.values__inner
+		padding: 0
+	.values__heading
+		+fonts($ZI, $main-color, 36, 44, 25)
+	.values__caption
+		+fonts($EG_Bold, $main-color, 24, 40, 25)

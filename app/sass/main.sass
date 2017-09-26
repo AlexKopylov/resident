@@ -43,7 +43,6 @@ body
 	flex-direction: column
 	min-height: 100vh
 	position: relative
-
 .content
 	flex: 1
 
@@ -80,6 +79,19 @@ body
 //===============================
 @import "manager-style" // style for manager page
 //===============================
+@import "values-style"
+// style for values page
+//===============================
+@import "location-style"
+// style for location page
+//===============================
+@import "advantage-style" // style for advantage page
+//===============================
+@import "architecture-style"
+// style for architecture page
+//===============================
+@import "house-style" // sty for house page
+//===============================
 
 .content
 	width: 100%
@@ -88,7 +100,8 @@ body
 	&__inner
 		+inner
 		position: relative
-
+		&--location
+			max-width: 100%
 
 	&__link-wrap
 		overflow: hidden
@@ -155,11 +168,20 @@ body
 	background: url("../img/main_page/bg-last.jpg") no-repeat center top / cover
 	min-height: 100vh
 [data-content="bg"]
-	background-color: #f4ede7
+	background-color: $bg-color
 	height: 100vh
-//[data-content="404"]
-//	background: url("../img/404/404_bg.png") no-repeat center top  / cover
-//	min-height: 100vh
+[data-content="values"]
+	background: url("../img/values_page/values_bg.jpg") no-repeat center top / cover
+	height: 100vh
+
+[data-content="architecture"]
+	background: url("../img/arhitecture/arhitecture_bg.jpg") no-repeat center top / cover
+	height: 100vh
+
+[data-content="house"]
+	background: url("../img/house/house_bg.jpg") no-repeat center top / cover
+	height: 100vh
+
 //===============================
 
 //===============================
@@ -227,6 +249,8 @@ body
 			+fonts($ZI, $main-color, 72, 60, 25)
 		&--manager
 			+fonts($ZI, $main-color, 72, 130, 25)
+		&--apartments
+			+fonts($ZI, $main-color, 60, 60, 25)
 	&__caption
 		+fonts($EG_Bold, $main-color, 18, 22, 25)
 		&--contact

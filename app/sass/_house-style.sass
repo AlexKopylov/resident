@@ -1,0 +1,188 @@
+@import "vars"
+
+.house
+	+bWidth(640, 1180)
+	height: 100vh
+	padding-top: 100px
+	&__inner
+		padding-left: 80px
+	&__page-heading
+		width: 100%
+		position: relative
+		z-index: 1
+		padding: 40px 0
+		&::before
+			content: ''
+			width: 340px
+			height: 340px
+			border: 1px solid $border-color
+			border-radius: 50%
+			position: absolute
+			z-index: -1
+			top: 75px
+			left: 50%
+			transform: translate(-50%, 0)
+		&::after
+			content: ''
+			width: 324px
+			height: 324px
+			border: 1px solid $border-color
+			border-radius: 50%
+			position: absolute
+			z-index: -1
+			top: 83px
+			left: 50%
+			transform: translate(-50%, 0)
+
+	&__page-heading-top
+		text-align: left
+		position: relative
+		z-index: 2
+	&__heading
+		+fonts($ZI, $main-color, 90, 130, 25)
+	&__page-heading-bot
+		text-align: center
+		position: relative
+		z-index: 1
+		&::before
+			content: ''
+			position: absolute
+			z-index: 2
+			top: 60%
+			left: 0
+			height: 1px
+			background-color: $orange-color
+			+bWidth(80, 600)
+		&::after
+			content: ''
+			position: absolute
+			z-index: 2
+			top: 60%
+			right: 0
+			height: 1px
+			background-color: $orange-color
+			+bWidth(80, 600)
+	&__caption
+		+fonts($EG_Bold, $main-color, 30, 40, 25)
+
+	&__description-wrap
+		position: relative
+		z-index: 5
+		width: 380px
+		margin: 0 auto
+		padding: 0 20px
+	&__description
+		width: 100%
+		height: 230px
+		overflow-y: auto
+		padding: 0 20px 0 15px
+	&__description-text
+		+fonts($R_Reg, #596472, 12, 24, 25)
+		text-align: justify
+		margin-bottom: 30px
+//===============================
+/*==========  Desktop First  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 992px)
+	/**/
+	.house__heading
+		+fonts($ZI, $main-color, 76, 72, 25)
+	.house__page-heading-bot::before,
+	.house__page-heading-bot::after
+		display: none
+/* Small Devices, Tablets */
+@media only screen and (max-width: 850px)
+	/**/
+	.house__inner
+		padding-left: 20px
+	.house__page-heading::before,
+	.house__page-heading::after
+		display: none
+	.house__description-wrap
+		width: 90%
+		padding: 40px 0
+		margin: 30px 0 0
+	.house__description-wrap::before
+		content: ''
+		width: 300px
+		height: 300px
+		border: 1px solid $border-color
+		border-radius: 50%
+		position: absolute
+		z-index: -1
+		top: 0
+		left: 50%
+		transform: translate(-50%, 0)
+	.house__description-wrap::after
+		content: ''
+		width: 286px
+		height: 286px
+		border: 1px solid $border-color
+		border-radius: 50%
+		position: absolute
+		z-index: -1
+		top: 7px
+		left: 50%
+		transform: translate(-50%, 0)
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px)
+	/**/
+	.house__heading
+		+fonts($ZI, $main-color, 60, 72, 25)
+	.house__caption
+		+fonts($EG_Bold, $main-color, 24, 40, 25)
+/* Small Devices, Tablets */
+@media only screen and (max-width: 600px)
+	/**/
+	.house
+		width: 100%
+	.house__inner
+		padding: 0
+	.house__page-heading
+		padding: 0
+	.house__page-heading-top
+		text-align: center
+	.house__page-heading-bot::before,
+	.house__page-heading-bot::after
+		display: block
+
+	.house__description-wrap
+		width: 100%
+		padding: 10px 0
+		margin: 0
+	.house__description-wrap::before
+		width: 200px
+		height: 200px
+	.house__description-wrap::after
+		width: 186px
+		height: 186px
+	.house__description
+		height: 200px
+	.house__description-text
+		margin-bottom: 10px
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px)
+	/**/
+	.house
+		padding-top: 70px
+	.house__page-heading
+		z-index: 3
+	.house__description-wrap
+		z-index: 1
+	.house__description-wrap::before
+		top: auto
+		bottom: 0
+	.house__description-wrap::after
+		top: auto
+		bottom: 8px
+	.house__description
+		height: 150px
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+	.house
+		padding-top: 50px

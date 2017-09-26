@@ -2,16 +2,15 @@
 
 .apartments
 	width: 100%
+	padding-top: 100px
+	background-color: darkseagreen
 	&__inner
-		+inner
-		padding-top: 90px
+		width: 100%
+		height: 100%
 		position: relative
-	&__heading
-		text-align: center
-		+fonts($ZI, $main-color, 60, 72, 25)
 	&__description
 		width: 100%
-		//background-color: burlywood
+		margin-top: 40px
 	&__description-inner
 		display: flex
 		justify-content: space-between
@@ -19,54 +18,95 @@
 	&__description-left
 		align-self: flex-end
 		width: 140px
+		background-color: #fff
 		&--roomer
 			align-self: center
+
 	&__description-center
 		width: calc(100% - 280px)
-		//background-color: #fff
+		background-color: cornflowerblue
 		text-align: center
-		height: 440px
+
+	&__description-center-inner
+		background-color: chartreuse
+		padding: 20px
+
+
+	&__img-wrap
+		width: 324px
+		height: 324px
+		background-color: orangered
+		margin: 0 auto
+		padding: 7px
+		border-radius: 50%
+		border: 1px solid
+	&__img
+		width: 100%
+		height: 100%
+		background-color: #fff
+		border-radius: 50%
+		border: 1px solid
 		position: relative
+	&__img-inner
+		position: absolute
+		background-color: #fff
+		width: 180%
+		top: 50%
+		left: 50%
+		transform: translate(-50%,-50%)
+		a
+			display: block
+			width: 100%
+			height: 100%
+			img
+				+img-respons
+
 	&__description-right
 		width: 140px
 		align-self: center
-.img-wrap
-
-	img
-		position: absolute
-		top: 50%
-		left: 50%
-		z-index: 10
-		transform: translate(-50%, -50%)
+		background-color: #fff
 
 //====================================
 .page-nav
 	width: 100%
 	margin: 30px auto
 	&__list
+		width: 100%
 		display: flex
 		justify-content: space-between
 		align-items: center
+		flex-wrap: wrap
 	&__item
 		position: relative
-		//width: 140px
-		//background-color: green
+		width: 140px
+
+		background-color: green
+		display: flex
+		justify-content: center
+		align-self: stretch
 	&__text
 		+fonts($R_Bold, #596472, 12, 16, 25)
+		color: #F9F9F9
+
+		align-self: center
+
 		transition: all 1s
 		&:hover
 			text-shadow: 0 1px 3px red
 			transition: all 1s
 	&__num
-		+fonts($EG_Bold, $main-color, 36, 42, 25)
+		+fonts($EG_Bold, $main-color, 36, 26, 25)
+		position: relative
+		top: -6px
+		left: -5px
 
 [data-page-nav-item="1"]
-	padding-left: 15px
+	padding-left: 17px
 	&::before
 		content: ''
 		position: absolute
-		top: 11px
-		left: 0
+		top: 8px
+		left: -2px
 		width: 15px
 		height: 9px
 		background: url("../img/apartments/DArrow.png") no-repeat center top
@@ -76,12 +116,39 @@
 	&::before
 		content: ''
 		position: absolute
-		top: 5px
+		top: 0
 		left: 0
 		width: 24px
 		height: 24px
 		background: url("../img/apartments/param_icon.png") no-repeat center top
+[data-page-nav-item="6"]
+	width: 100%
+//====================================
+.windrose
+	position: absolute
+	top: 100%
+	left: 10px
+	transform: translate(0, -20%)
+	&__inner
+		background-color: greenyellow
+		width: 100px
+		height: 100px
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			width: 72px
+			height: 72px
+			background: url("../img/compass.png") no-repeat center center / cover
+		&:nth-child(1)
+			position: absolute
+			top: 0
+			left: 0
 
+//====================================
 //====================================
 .room-set
 	width: 140px
@@ -113,70 +180,206 @@
 .param
 	width: 140px
 	position: relative
-	padding: 40px 0
-	&__link
-		position: absolute
-		width: 30px
-		height: 30px
-		background-color: red
-		left: 0
-		right: 0
-		margin: 0 auto
-		&--top
-			top: 0
-		&--bot
-			bottom: 0
+	//padding: 40px 0
 
 	&__list
-		+bWidth(125, 140)
-		margin: 0 0 0 auto
+		width: 100%
+		margin: 0 auto
 		height: 350px
-		//overflow: hidden
-		//overflow-y: auto
-		border-top-color: red
+		background-color: red
 	&__item
 		width: 100%
 		background-color: green
-		height: 60px
 		display: flex
 		flex-wrap: wrap
 		justify-content: center
-		align-items: flex-start
+		align-items: center
 		margin-bottom: 10px
-	&__num
+
+	&__room-num
+		display: block
 		width: 50%
+		background-color: yellow
+		+fonts($EG_Bold, $main-color, 36, 60, 25)
+		text-align: center
+		position: relative
+		top: -1px
+
+
+	&__room
+		width: 50%
+		display: block
+		background-color: cadetblue
+		+fonts($R_Reg, #000, 12, 60, 25)
+		text-align: center
+
+
+
+	&__num
+		width: 100%
 		height: 30px
 		display: block
 		background-color: #fff
-		//+fonts($EG_Bold, $main-color, 36, 36, 25)
-		+fonts($R_Reg, #000, 12, 16, 25)
-
-
+		+fonts($EG_Bold, $main-color, 36, 30, 25)
 		text-align: center
+		position: relative
+		top: -4px
+		sub
+			font-size: 18px
 		sub
 			bottom: 0
 		&--big
-			width: 100%
+			width: 50%
 
 	&__text
 		display: block
-		width: 50%
+		background-color: cadetblue
+		width: 100%
 		height: 30px
-		+fonts($R_Reg, #000, 12, 16, 25)
+		+fonts($R_Reg, #000, 12, 30, 25)
 		//height: 42px
-		align-self: flex-start
-		&--big
-			width: 100%
+		align-self: center
+		&--small
+			width: 50%
 			text-align: center
 			padding: 5px 0
 
 //====================================
-.windrose-wrap
-	position: absolute
-	top: 40%
-	left: 10px
-	transform: translate(0, -20%)
+//====================================
+//====================================
 
+button
+	-webkit-appearance: none
+	background: transparent
+	border: 0
+	outline: 0
+
+
+.paginate
+	position: relative
+	margin:  10px
+	width: 50px
+	height: 50px
+	cursor: pointer
+	transform: translate3d(0, 0, 0)
+	position: absolute
+	top: 50%
+	margin-top: -20px
+	-webkit-filter: drop-shadow(0 2px 0px rgba(0, 0, 0, 0.2))
+
+.paginate i
+	position: absolute
+	top: 15%
+	left: 0
+	width: 10px
+	height: 1px
+
+	background: #000
+	transition: all 0.15s ease
+
+.paginate.left
+
+	right: 0
+	left: 0
+	margin: auto
+	position: absolute
+	transform: rotate(-90deg)
+	top: 100%
+
+.paginate.left i
+	transform-origin: 0 50%
+
+.paginate.left i:first-child
+	transform: translate(0, -1px) rotate(40deg)
+
+.paginate.left i:last-child
+	transform: translate(0, 1px) rotate(-40deg)
+
+.paginate.left:hover i:first-child
+	transform: translate(0, -1px) rotate(30deg)
+
+.paginate.left:hover i:last-child
+	transform: translate(0, 1px) rotate(-30deg)
+
+.paginate.left:active i:first-child
+	transform: translate(1px, -1px) rotate(25deg)
+
+.paginate.left:active i:last-child
+	transform: translate(1px, 1px) rotate(-25deg)
+
+.paginate.left[data-state=disabled] i:first-child
+	transform: translate(-5px, 0) rotate(0deg)
+
+.paginate.left[data-state=disabled] i:last-child
+	transform: translate(-5px, 0) rotate(0deg)
+
+.paginate.left[data-state=disabled]:hover i:first-child
+	transform: translate(-5px, 0) rotate(0deg)
+
+.paginate.left[data-state=disabled]:hover i:last-child
+	transform: translate(-5px, 0) rotate(0deg)
+
+.paginate.right
+	right: 0
+	left: 0
+	margin: auto
+	position: absolute
+	transform: rotate(-90deg)
+	bottom: 100%
+
+.paginate.right i
+	transform-origin: 100% 50%
+
+.paginate.right i:first-child
+	transform: translate(0, 1px) rotate(40deg)
+
+.paginate.right i:last-child
+	transform: translate(0, -1px) rotate(-40deg)
+
+.paginate.right:hover i:first-child
+	transform: translate(0, 1px) rotate(30deg)
+
+.paginate.right:hover i:last-child
+	transform: translate(0, -1px) rotate(-30deg)
+
+.paginate.right:active i:first-child
+	transform: translate(1px, 1px) rotate(25deg)
+
+.paginate.right:active i:last-child
+	transform: translate(1px, -1px) rotate(-25deg)
+
+.paginate.right[data-state=disabled] i:first-child
+	transform: translate(5px, 0) rotate(0deg)
+
+.paginate.right[data-state=disabled] i:last-child
+	transform: translate(5px, 0) rotate(0deg)
+
+.paginate.right[data-state=disabled]:hover i:first-child
+	transform: translate(5px, 0) rotate(0deg)
+
+.paginate.right[data-state=disabled]:hover i:last-child
+	transform: translate(5px, 0) rotate(0deg)
+
+.paginate[data-state=disabled]
+	opacity: 0.3
+	cursor: default
+
+
+.counter
+	text-align: center
+	position: absolute
+	width: 100%
+	top: 50%
+	margin-top: -15px
+	font-size: 30px
+	font-family: Helvetica, sans-serif
+	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.2)
+	color: #fff
+
+
+//====================================
+//====================================
+//====================================
 //====================================
 
 /*==========  Desktop First  ==========*/

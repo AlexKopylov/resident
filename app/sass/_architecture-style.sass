@@ -1,0 +1,185 @@
+@import "vars"
+
+.architecture
+	+bWidth(640, 1180)
+	height: 100vh
+	padding-top: 100px
+	&__inner
+		padding: 0 20px
+	&__page-heading
+		width: 100%
+		position: relative
+		z-index: 1
+		padding: 40px 0
+		&::before
+			content: ''
+			width: 340px
+			height: 340px
+			border: 1px solid $border-color
+			border-radius: 50%
+			position: absolute
+			z-index: -1
+			top: 60px
+			left: 50%
+			transform: translate(-50%, 0)
+		&::after
+			content: ''
+			width: 324px
+			height: 324px
+			border: 1px solid $border-color
+			border-radius: 50%
+			position: absolute
+			z-index: -1
+			top: 68px
+			left: 50%
+			transform: translate(-50%, 0)
+
+	&__page-heading-top
+		text-align: center
+		position: relative
+		z-index: 2
+	&__heading
+		+fonts($ZI, $main-color, 72, 100, 25)
+	&__page-heading-bot
+		text-align: center
+		position: relative
+		z-index: 1
+		&::before
+			content: ''
+			position: absolute
+			z-index: 2
+			top: 60%
+			left: 0
+			height: 1px
+			background-color: $orange-color
+			+bWidth(80, 600)
+		&::after
+			content: ''
+			position: absolute
+			z-index: 2
+			top: 60%
+			right: 0
+			height: 1px
+			background-color: $orange-color
+			+bWidth(80, 600)
+	&__caption
+		+fonts($EG_Bold, $main-color, 30, 40, 25)
+
+	&__description-wrap
+		position: relative
+		z-index: 5
+		//+bWidth(400, 640)
+		width: 400px
+		margin: 0 auto
+		padding: 0 20px
+	&__description
+		width: 100%
+		height: 170px
+		overflow-y: auto
+		padding: 0 20px 0 15px
+	&__description-text
+		+fonts($R_Reg, #596472, 12, 24, 25)
+		text-align: justify
+		margin-bottom: 30px
+//===============================
+/*==========  Desktop First  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 992px)
+	/**/
+	.architecture__heading
+		+fonts($ZI, $main-color, 60, 72, 25)
+	.architecture__page-heading::before,
+	.architecture__page-heading::after
+		display: none
+	.architecture__page-heading-bot::before,
+	.architecture__page-heading-bot::after
+		display: none
+	.architecture__description-wrap
+		margin: 20px auto 0
+		padding: 65px 0
+	.architecture__description-wrap::before
+		content: ''
+		width: 300px
+		height: 300px
+		border: 1px solid $border-color
+		border-radius: 50%
+		position: absolute
+		z-index: -1
+		top: 0
+		left: 50%
+		transform: translate(-50%, 0)
+	.architecture__description-wrap::after
+		content: ''
+		width: 286px
+		height: 286px
+		border: 1px solid $border-color
+		border-radius: 50%
+		position: absolute
+		z-index: -1
+		top: 7px
+		left: 50%
+		transform: translate(-50%, 0)
+/* Small Devices, Tablets */
+@media only screen and (max-width: 700px)
+	/**/
+	.architecture
+		width: 100%
+		padding-top: 70px
+	.architecture__page-heading
+		padding: 20px 0
+	.architecture__description-wrap
+		margin: 0 auto
+		padding: 15px 0
+	.architecture__description-wrap::before
+		content: ''
+		width: 200px
+		height: 200px
+		border: 1px solid $border-color
+		border-radius: 50%
+		position: absolute
+		z-index: -1
+		top: 0
+		left: 50%
+		transform: translate(-50%, 0)
+	.architecture__description-wrap::after
+		content: ''
+		width: 184px
+		height: 184px
+		border: 1px solid $border-color
+		border-radius: 50%
+		position: absolute
+		z-index: -1
+		top: 7px
+		left: 50%
+		transform: translate(-50%, 0)
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px)
+	/**/
+	.architecture__inner
+		padding: 0
+	.architecture__page-heading
+		padding: 0
+
+	.architecture__heading
+		+fonts($ZI, $main-color, 36, 72, 25)
+	.architecture__caption
+		+fonts($EG_Bold, $main-color, 24, 40, 25)
+	.architecture__description-wrap
+		width: 90%
+	.architecture__description-wrap::before,
+	.architecture__description-wrap::after
+		display: none
+	.architecture__description
+		height: 100px
+	.architecture__description-text
+		margin-bottom: 5px
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+	.architecture
+		padding-top: 50px
+	.architecture__description-wrap
+		width: 100%
+	.architecture__description
+		padding: 0 20px 0 0
